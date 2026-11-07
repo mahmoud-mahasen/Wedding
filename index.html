@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة زفاف محمود &amp; محاسن</title>
+<meta name="theme-color" content="#14100b">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3e2ab"/><stop offset=".5" stop-color="#b8924a"/><stop offset="1" stop-color="#e6cb86"/></linearGradient>
+<symbol id="mm" viewBox="0 0 200 200"><circle cx="100" cy="100" r="95" fill="none" stroke="url(#gg)" stroke-width="1.6"/><circle cx="100" cy="100" r="88" fill="none" stroke="url(#gg)" stroke-width=".7" stroke-dasharray="1.5 4"/><text x="100" y="118" text-anchor="middle" font-family="Pinyon Script,Cormorant Garamond,serif" font-size="72" fill="url(#gg)" direction="ltr">M<tspan font-size="32" dy="-9">&amp;</tspan><tspan dy="9">M</tspan></text></symbol>
+<symbol id="orn" viewBox="0 0 240 20"><path d="M0 10h98M142 10h98" stroke="url(#gg)"/><path d="M120 3l7 7-7 7-7-7z" fill="none" stroke="url(#gg)" stroke-width="1.2"/><circle cx="106" cy="10" r="1.6" fill="url(#gg)"/><circle cx="134" cy="10" r="1.6" fill="url(#gg)"/></symbol>
+</defs></svg>
+
+<div class="gate" id="gate">
+  <div class="door l"><i></i><b></b></div><div class="door r"><i></i><b></b></div>
+  <div class="seal-wrap">
+    <button class="seal" id="open" type="button" aria-label="افتح الدعوة"><svg aria-hidden="true"><use href="#mm"/></svg></button>
+    <p class="gn">محمود <span>&amp;</span> محاسن</p>
+    <p class="hint">المس الختم</p>
+  </div>
+</div>
+
+<button class="music" id="music" type="button" aria-label="تشغيل أو إيقاف الموسيقى"><i></i><i></i><i></i><i></i></button>
+<button class="music theme" id="theme" type="button" aria-label="تبديل الخلفية بين الفاتحة والداكنة"><s></s></button>
+<audio id="bgm" loop preload="none"></audio>
+<canvas id="dust" aria-hidden="true"></canvas>
+
+<header class="stage" id="top">
+  <div class="bg"></div>
+  <div class="stagein">
+    <svg class="mono" id="crest" aria-hidden="true"><use href="#mm"/></svg>
+    <p class="kick">تتشرف بدعوتكم</p>
+    <h1 class="names"><span class="foil">محمود</span><em class="foil">&amp;</em><span class="foil">محاسن</span></h1>
+    <p class="en foil">Mahmoud &amp; Mahasen</p>
+    <div class="dt"><span>الثلاثاء</span><b>08 · 12 · 2026</b><span>القاهرة</span></div>
+  </div>
+  <a class="down" href="#inv" aria-label="انتقل للدعوة"><span>اسحب لأسفل</span><i></i><i></i></a>
+</header>
+
+<main id="main">
+  <section class="paper reveal" id="inv">
+    <i class="cr a"></i><i class="cr b"></i><i class="cr c"></i><i class="cr d"></i>
+    <p class="bism">بسم الله الرحمن الرحيم</p>
+    <p class="dua">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+    <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+    <p class="inv">يتشرف</p>
+    <div class="fam">
+      <p>آل بلة زهران</p><p>آل الحكيم</p>
+      <p>آل عبد الله زهران</p><p>آل المنا</p>
+    </div>
+    <p class="inv">بدعوتكم لحضور حفل زفاف</p>
+    <div class="pair">
+      <div><small>ابنهم</small><h2 class="foil dk">محمود</h2></div>
+      <span class="amp" aria-hidden="true">&amp;</span>
+      <div><small>ابنتهم</small><h2 class="foil dk">محاسن</h2></div>
+    </div>
+    <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+    <p class="dua">وذلك بمشيئة الله يوم الثلاثاء</p>
+    <p class="date">8/12/2026 م</p>
+    <p class="inv">بقاعة الماسة / القاهرة</p>
+    <p class="dua">يبدأ الزفاف في تمام الساعة الثامنة مساءً</p>
+  </section>
+
+  <section class="sec reveal" aria-labelledby="ct">
+    <h3 id="ct" class="foil">العدّ التنازلي</h3>
+    <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+    <div class="count" id="count" role="timer">
+      <div><b id="d">00</b><span>يوم</span></div><div><b id="h">00</b><span>ساعة</span></div>
+      <div><b id="m">00</b><span>دقيقة</span></div><div><b id="s">00</b><span>ثانية</span></div>
+    </div>
+    <p class="done foil" id="done" hidden>حان الآن موعد الفرح — بارك الله لهما وجمع بينهما في خير</p>
+  </section>
+
+  <section class="sec reveal" aria-labelledby="sc">
+    <h3 id="sc" class="foil">جدول اليوم</h3>
+    <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+    <ol class="tl">
+      <li><time>7:30 مساءً</time><p>استقبال الضيوف</p></li>
+      <li><time>8:00 مساءً</time><p>بداية مراسم الزفاف</p></li>
+      <li><time>11:00 مساءً</time><p>الجرتق</p></li>
+      <li><time>12:00 منتصف الليل</time><p>نهاية الحفل</p></li>
+    </ol>
+  </section>
+
+  <section class="sec reveal" aria-labelledby="vn">
+    <h3 id="vn" class="foil">يسعدنا استقبالكم</h3>
+    <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+    <figure class="hall" id="hall"><img src="hall.jpg" alt="قاعة الماسة بالقاهرة" loading="lazy" width="1200" height="914"></figure>
+    <p class="venue">قاعة الماسة / القاهرة</p>
+    <div class="map"><iframe title="موقع قاعة الماسة على خرائط جوجل" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=29.975443,31.1657097&amp;z=16&amp;hl=ar&amp;output=embed"></iframe></div>
+    <a class="btn" href="https://maps.app.goo.gl/EGhRBpgct2q2cdY76?g_st=ac" target="_blank" rel="noopener noreferrer"><span>الوصول إلى القاعة</span></a>
+  </section>
+
+  <section class="sec reveal" aria-labelledby="ws">
+    <h3 id="ws" class="foil">كلمة من القلب</h3>
+    <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+    <p class="dua soft">اكتبوا لنا تهنئتكم، فكلماتكم تسعدنا</p>
+    <form id="wish" name="wishes" method="POST" data-netlify="true" netlify-honeypot="bot">
+      <input type="hidden" name="form-name" value="wishes">
+      <p hidden><label>لا تملأ هذا الحقل <input name="bot"></label></p>
+      <label>الاسم<input name="name" required maxlength="60" autocomplete="name"></label>
+      <label>التهنئة<textarea name="message" required maxlength="500" rows="4"></textarea></label>
+      <button class="btn" type="submit"><span>إرسال التهنئة</span></button>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+    <div id="wishList"></div>
+  </section>
+</main>
+
+<footer class="foot reveal" dir="ltr" lang="en">
+  <svg class="mono" aria-hidden="true"><use href="#mm"/></svg>
+  <p class="fn foil">Mahmoud &amp; Mahasen</p>
+  <p class="fd">08 December 2026</p>
+  <p class="fl">With love and gratitude.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
