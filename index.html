@@ -20,12 +20,13 @@
   <div class="door l"><i></i><b></b></div><div class="door r"><i></i><b></b></div>
   <div class="seal-wrap">
     <button class="seal" id="open" type="button" aria-label="افتح الدعوة"><svg aria-hidden="true"><use href="#mm"/></svg></button>
-    <p class="gn">محمود <span>&amp;</span> محاسن</p>
-    <p class="hint">المس الختم</p>
+    <p class="gn"><span data-en="Mahmoud">محمود</span> <span class="am">&amp;</span> <span data-en="Mahasin">محاسن</span></p>
+    <p class="hint" data-en="Tap the seal to open">المس الختم</p>
   </div>
 </div>
 
 <button class="music" id="music" type="button" aria-label="تشغيل أو إيقاف الموسيقى"><i></i><i></i><i></i><i></i></button>
+<button class="music lang" id="lang" type="button" aria-label="Switch language">EN</button>
 <button class="music theme" id="theme" type="button" aria-label="تبديل الخلفية بين الفاتحة والداكنة"><s></s></button>
 <audio id="bgm" loop preload="none"></audio>
 <canvas id="dust" aria-hidden="true"></canvas>
@@ -34,78 +35,78 @@
   <div class="bg"></div>
   <div class="stagein">
     <svg class="mono" id="crest" aria-hidden="true"><use href="#mm"/></svg>
-    <p class="kick">تتشرف بدعوتكم</p>
-    <h1 class="names"><span class="foil">محمود</span><em class="foil">&amp;</em><span class="foil">محاسن</span></h1>
-    <p class="en foil">Mahmoud &amp; Mahasen</p>
-    <div class="dt"><span>الثلاثاء</span><b>08 · 12 · 2026</b><span>القاهرة</span></div>
+    <p class="kick" data-en="Join us in celebrating">تتشرف بدعوتكم</p>
+    <h1 class="names"><span class="foil" data-en="Mahmoud">محمود</span><em class="foil">&amp;</em><span class="foil" data-en="Mahasin">محاسن</span></h1>
+    <p class="en foil">Mahmoud &amp; Mahasin</p>
+    <div class="dt"><span data-en="Tuesday">الثلاثاء</span><b>08 · 12 · 2026</b><span data-en="Cairo">القاهرة</span></div>
   </div>
-  <a class="down" href="#inv" aria-label="انتقل للدعوة"><span>اسحب لأسفل</span><i></i><i></i></a>
+  <a class="down" href="#inv" aria-label="انتقل للدعوة"><span data-en="Swipe up">اسحب لأعلى</span><i></i><i></i></a>
 </header>
 
 <main id="main">
   <section class="paper reveal" id="inv">
     <i class="cr a"></i><i class="cr b"></i><i class="cr c"></i><i class="cr d"></i>
-    <p class="bism">بسم الله الرحمن الرحيم</p>
-    <p class="dua">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+    <p class="bism" data-en="In the name of Allah, the Most Gracious, the Most Merciful">بسم الله الرحمن الرحيم</p>
+    <p class="dua" data-en="May Allah bless them and unite them in goodness">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
     <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
-    <p class="inv">يتشرف</p>
+    <p class="inv" data-en="The families of">يتشرف</p>
     <div class="fam">
-      <p>آل بلة زهران</p><p>آل الحكيم</p>
-      <p>آل عبد الله زهران</p><p>آل المنا</p>
+      <p data-en="Balla Zahran">آل بلة زهران</p><p data-en="Al Hakim">آل الحكيم</p>
+      <p data-en="Abdullah Zahran">آل عبد الله زهران</p><p data-en="Al Manna">آل المنا</p>
     </div>
-    <p class="inv">بدعوتكم لحضور حفل زفاف</p>
+    <p class="inv" data-en="joyfully invite you to celebrate the marriage of">بدعوتكم لحضور حفل زفاف</p>
     <div class="pair">
-      <div><small>ابنهم</small><h2 class="foil dk">محمود</h2></div>
+      <div><small data-en="their son">ابنهم</small><h2 class="foil dk" data-en="Mahmoud">محمود</h2></div>
       <span class="amp" aria-hidden="true">&amp;</span>
-      <div><small>ابنتهم</small><h2 class="foil dk">محاسن</h2></div>
+      <div><small data-en="their daughter">ابنتهم</small><h2 class="foil dk" data-en="Mahasin">محاسن</h2></div>
     </div>
     <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
-    <p class="dua">وذلك بمشيئة الله يوم الثلاثاء</p>
-    <p class="date">8/12/2026 م</p>
-    <p class="inv">بقاعة الماسة / القاهرة</p>
-    <p class="dua">يبدأ الزفاف في تمام الساعة الثامنة مساءً</p>
+    <p class="dua" data-en="On Tuesday, Insha'Allah">وذلك بمشيئة الله يوم الثلاثاء</p>
+    <p class="date" data-en="8 December 2026">8/12/2026 م</p>
+    <p class="inv" data-en="at Al Masa Hall, Cairo">بقاعة الماسة / القاهرة</p>
+    <p class="dua" data-en="The celebration begins at 8:00 PM sharp">يبدأ الزفاف في تمام الساعة الثامنة مساءً</p>
   </section>
 
   <section class="sec reveal" aria-labelledby="ct">
-    <h3 id="ct" class="foil">العدّ التنازلي</h3>
+    <h3 id="ct" class="foil" data-en="Counting down">العدّ التنازلي</h3>
     <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
     <div class="count" id="count" role="timer">
-      <div><b id="d">00</b><span>يوم</span></div><div><b id="h">00</b><span>ساعة</span></div>
-      <div><b id="m">00</b><span>دقيقة</span></div><div><b id="s">00</b><span>ثانية</span></div>
+      <div><b id="d">00</b><span data-en="Days">يوم</span></div><div><b id="h">00</b><span data-en="Hours">ساعة</span></div>
+      <div><b id="m">00</b><span data-en="Minutes">دقيقة</span></div><div><b id="s">00</b><span data-en="Seconds">ثانية</span></div>
     </div>
-    <p class="done foil" id="done" hidden>حان الآن موعد الفرح — بارك الله لهما وجمع بينهما في خير</p>
+    <p class="done foil" id="done" hidden data-en="It's time to celebrate — may Allah bless their union">حان الآن موعد الفرح — بارك الله لهما وجمع بينهما في خير</p>
   </section>
 
   <section class="sec reveal" aria-labelledby="sc">
-    <h3 id="sc" class="foil">جدول اليوم</h3>
+    <h3 id="sc" class="foil" data-en="Schedule of the Evening">جدول اليوم</h3>
     <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
     <ol class="tl">
-      <li><time>7:30 مساءً</time><p>استقبال الضيوف</p></li>
-      <li><time>8:00 مساءً</time><p>بداية مراسم الزفاف</p></li>
-      <li><time>11:00 مساءً</time><p>الجرتق</p></li>
-      <li><time>12:00 منتصف الليل</time><p>نهاية الحفل</p></li>
+      <li><time data-en="7:30 PM">7:30 مساءً</time><p data-en="Guests arrive">استقبال الضيوف</p></li>
+      <li><time data-en="8:00 PM">8:00 مساءً</time><p data-en="The celebration begins">بداية مراسم الزفاف</p></li>
+      <li><time data-en="11:00 PM">11:00 مساءً</time><p data-en="Jirtig — a Sudanese wedding tradition">الجرتق</p></li>
+      <li><time data-en="12:00 AM (midnight)">12:00 منتصف الليل</time><p data-en="Farewell">نهاية الحفل</p></li>
     </ol>
   </section>
 
   <section class="sec reveal" aria-labelledby="vn">
-    <h3 id="vn" class="foil">يسعدنا استقبالكم</h3>
+    <h3 id="vn" class="foil" data-en="We can't wait to see you">يسعدنا استقبالكم</h3>
     <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
     <figure class="hall" id="hall"><img src="hall.jpg" alt="قاعة الماسة بالقاهرة" loading="lazy" width="1200" height="914"></figure>
-    <p class="venue">قاعة الماسة / القاهرة</p>
+    <p class="venue" data-en="Al Masa Hall, Cairo">قاعة الماسة / القاهرة</p>
     <div class="map"><iframe title="موقع قاعة الماسة على خرائط جوجل" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=29.975443,31.1657097&amp;z=16&amp;hl=ar&amp;output=embed"></iframe></div>
-    <a class="btn" href="https://maps.app.goo.gl/EGhRBpgct2q2cdY76?g_st=ac" target="_blank" rel="noopener noreferrer"><span>الوصول إلى القاعة</span></a>
+    <a class="btn" href="https://maps.app.goo.gl/EGhRBpgct2q2cdY76?g_st=ac" target="_blank" rel="noopener noreferrer"><span data-en="Get directions">الوصول إلى القاعة</span></a>
   </section>
 
   <section class="sec reveal" aria-labelledby="ws">
-    <h3 id="ws" class="foil">كلمة من القلب</h3>
+    <h3 id="ws" class="foil" data-en="Leave a Message">كلمة من القلب</h3>
     <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
-    <p class="dua soft">اكتبوا لنا تهنئتكم، فكلماتكم تسعدنا</p>
+    <p class="dua soft" data-en="Leave a note for the couple — your kind words mean so much to us">اكتبوا لنا تهنئتكم، فكلماتكم تسعدنا</p>
     <form id="wish" name="wishes" method="POST" data-netlify="true" netlify-honeypot="bot">
       <input type="hidden" name="form-name" value="wishes">
       <p hidden><label>لا تملأ هذا الحقل <input name="bot"></label></p>
-      <label>الاسم<input name="name" required maxlength="60" autocomplete="name"></label>
-      <label>التهنئة<textarea name="message" required maxlength="500" rows="4"></textarea></label>
-      <button class="btn" type="submit"><span>إرسال التهنئة</span></button>
+      <label><span data-en="Your name">الاسم</span><input name="name" required maxlength="60" autocomplete="name"></label>
+      <label><span data-en="Your message">التهنئة</span><textarea name="message" required maxlength="500" rows="4"></textarea></label>
+      <button class="btn" type="submit"><span data-en="Send your wishes">إرسال التهنئة</span></button>
       <p class="msg" id="msg" role="status"></p>
     </form>
     <div id="wishList"></div>
@@ -114,7 +115,7 @@
 
 <footer class="foot reveal" dir="ltr" lang="en">
   <svg class="mono" aria-hidden="true"><use href="#mm"/></svg>
-  <p class="fn foil">Mahmoud &amp; Mahasen</p>
+  <p class="fn foil">Mahmoud &amp; Mahasin</p>
   <p class="fd">08 December 2026</p>
   <p class="fl">With love and gratitude.</p>
 </footer>
