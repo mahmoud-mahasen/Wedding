@@ -13,6 +13,19 @@ btn.addEventListener('click',function(){
   au.play().then(function(){mus.hidden=false;mus.classList.add('on')}).catch(function(){});
 });
 mus.addEventListener('click',function(){if(au.paused){au.play();mus.classList.add('on')}else{au.pause();mus.classList.remove('on')}});
+/* English / عربي */
+var LK=document.getElementById('lang'),TR=[].slice.call(document.querySelectorAll('[data-en]')),CUR='ar';
+TR.forEach(function(e){e.dataset.ar=e.textContent});
+function T(a,e){return CUR==='en'?e:a}
+function setLang(l){CUR=l;var d=document.documentElement;d.lang=l;d.dir=l==='en'?'ltr':'rtl';
+  TR.forEach(function(e){e.textContent=l==='en'?e.dataset.en:e.dataset.ar});
+  LK.textContent=l==='en'?'عربي':'EN';LK.setAttribute('aria-label',l==='en'?'التبديل إلى العربية':'Switch to English');
+  document.title=l==='en'?'Wedding Invitation — Mahmoud & Mahasin':'دعوة زفاف محمود & محاسن';
+  try{localStorage.setItem('lang',l)}catch(e){}}
+LK.addEventListener('click',function(){setLang(CUR==='en'?'ar':'en')});
+(function(){var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+  if(/[?&]lang=en/.test(location.search))s='en';else if(/[?&]lang=ar/.test(location.search))s='ar';
+  if(s==='en')setLang('en')})();
 /* light / dark option */
 var th=document.getElementById('theme');
 try{if(localStorage.getItem('theme')==='light')B.classList.add('light')}catch(e){}
@@ -45,13 +58,13 @@ function send(n,m,fd){
 var f=document.getElementById('wish'),msg=document.getElementById('msg');
 f.addEventListener('submit',function(e){
   e.preventDefault();var fd=new FormData(f),n=fd.get('name'),m=fd.get('message');
-  msg.textContent='جارٍ الإرسال…';
+  msg.textContent=T('جارٍ الإرسال…','Sending…');
   send(n,m,fd)
   .then(function(){
-    msg.textContent='شكراً لكم، وصلت تهنئتكم الغالية 🤍';
+    msg.textContent=T('شكراً لكم، وصلت تهنئتكم الغالية 🤍','Thank you — your wishes have reached us 🤍');
     var c=document.createElement('div');c.className='wc';var p=document.createElement('p'),b=document.createElement('b');p.textContent=m;b.textContent='— '+n;c.appendChild(p);c.appendChild(b);
     document.getElementById('wishList').prepend(c);f.reset()})
-  .catch(function(){msg.textContent='تعذّر الإرسال الآن، حاولوا مرة أخرى.'});
+  .catch(function(){msg.textContent=T('تعذّر الإرسال الآن، حاولوا مرة أخرى.','Could not send right now, please try again.')});
 });
 /* countdown: 8 Dec 2026 20:00 Africa/Cairo */
 function off(u){try{var p={};new Intl.DateTimeFormat('en-US',{timeZone:'Africa/Cairo',hourCycle:'h23',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',second:'numeric'}).formatToParts(new Date(u)).forEach(function(x){p[x.type]=+x.value});return Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute,p.second)-u}catch(e){return 72e5}}
